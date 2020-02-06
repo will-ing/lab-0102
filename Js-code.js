@@ -9,7 +9,17 @@ var correctAnswers = 0;
 // ask questions2
   // if questions 2 is answered correct: correctAnswers = correctAnswers + 1
 // 1st question
-
+// break outer;
+// break;
+// var needToBreak = false
+qone();
+qtwo();
+qthree();
+qfour();
+qfive();
+qsix();
+qseven();
+function qone() {
       var tries;
       for (tries = 0; tries < 6; tries++){
     var number = prompt("guess a number 1 -10");
@@ -31,28 +41,32 @@ var correctAnswers = 0;
       alert("number to high");
       }
       }
-      var answersq7 = ['apples','avocados','tomatoes','oranges','pineapples','limes'];
-      for (var i = 0; i < answersq7.length; i++)
-     {
-     var q7 =  prompt("what is joes favorite fruit");
-      if (q7.toLowerCase() === answersq7[i])
-      {
-      
-      alert("you got it right");
-        correctAnswers = correctAnswers + 1;
-      }
-      else
-      {
-        alert("you got it wrong");
-      }
+      // qtwo();
     }
-    // 2nd question
-        var tries1;
-        for (tries1 = 0; tries1 < 6; tries1++){
+
+function qtwo(){
+
+      do{
+        var answersq7 = ['apples','avocados','tomatoes','oranges','pineapples','limes'];
+          var q7 =  prompt("what is joes favorite fruit");
+      for (var i = 0; i < answersq7.length; i++){
+        if (q7.toLowerCase() === answersq7[i]){
+          alert("you got it right");
+          found = true;
+          }
+        }
+        attempts ++;
+      }while (attempts <7 && !found);
+    }
+  
+    
+function qthree(){        
+      
+        for (var tries = 0; tries < 6; tries++){
         var number = prompt("how many years was joe in the marine corps");
     
     
-        console.log('NUMBER OF TRIES IS: ', tries1);
+        console.log('NUMBER OF TRIES IS: ', tries);
     
         if (number == 4 ){
             alert("correct you are awesome");
@@ -69,20 +83,22 @@ var correctAnswers = 0;
           alert("number to high");
         }
         }
-        // 3rd question
-    var tries2;
-    for (tries2 = 0; tries2 < 6; tries2++){
+      }
+        
+function qfour(){
+   
+    for (var tries = 0; tries < 6; tries++){
     var number = prompt("how many people are in joes picture");
 
 
-    console.log('NUMBER OF TRIES IS: ', tries2);
+    console.log('NUMBER OF TRIES IS: ', tries);
 
     if (number == 2 ){
         alert("your number is correct");
         correctAnswers = correctAnswers + 1;
         break;
     }
-    else if (tries2 === 5){
+    else if (tries === 5){
       alert('Very Worng');
     }
     else if (number<2){
@@ -92,9 +108,12 @@ var correctAnswers = 0;
       alert("number to high");
     }
     }
-    // 4th question
-    var tries;
-    for (tries = 0; tries < 6; tries++){
+  }
+
+    
+function qfive(){
+
+    for (var tries = 0; tries < 6; tries++){
     var number = prompt("how bad ass are you on a scale of one to ten");
 
     if (number == 1 ){
@@ -112,7 +131,8 @@ var correctAnswers = 0;
       alert("number to high");
     }
     }
-    // question 5
+  }
+function qsix(){
     var name = prompt('whats your name');
     alert (name +' welcome to joes about page');
     var q1 = prompt('Where are you from');
@@ -133,7 +153,9 @@ var correctAnswers = 0;
     {
     alert('incorrect joe does come from a military family');
     }
+    }
     // console.log(question1 + "joe does come from a military family")
+    function qseven(){
     var question2 = prompt('Does joe have a cdl');
     if (question2 === 'yes' || question2 === 'y')
     {
@@ -155,6 +177,27 @@ var correctAnswers = 0;
     {
     alert(' joe does have a secret clearance');
     }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // console.log(question3 + "joe does have a secret clearance")
 // var question4 = prompt('Is the Marine corps the best branch');
 // if (question4 === 'yes' || question4 === 'y')
@@ -253,7 +296,25 @@ var correctAnswers = 0;
 // default:
 //   alert('joe was in the Marines')
 //   // console.log('joe was a marine')
+// var attempts = 0;
+// var found = false;
+
+
+// do while statement 
+
+
+
+
+// do{
+//     var answersq7 = ['apples','avocados','tomatoes','oranges','pineapples','limes'];
+//      var q7 =  prompt("what is joes favorite fruit");
+//  for (var i = 0; i < answersq7.length; i++){
+//     if (q7.toLowerCase() === answersq7[i]){
+//       alert("you got it right");
+//       found = true;
+//       }
+//     }
+//     attempts ++;
+// }while (attempts <7 && !found)
 
 alert("you got this many right " + correctAnswers)
-
-  
